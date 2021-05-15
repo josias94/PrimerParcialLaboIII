@@ -4,12 +4,12 @@ window.addEventListener("load",function(){
 
 function PeticionGET(){
     var peticionHttp = new XMLHttpRequest();
-    // $("preview-area").hidden = false;
+    $("preview-area").hidden = false;
     peticionHttp.onreadystatechange = function(){
         if(peticionHttp.readyState == 4){
             if(peticionHttp.status == 200){  
                 let array = JSON.parse(peticionHttp.responseText);
-                // $("preview-area").hidden = true;
+                 $("preview-area").hidden = true;                 
                 $_Table(document.getElementById("d_tbl"), array);
             }
         }        
@@ -70,6 +70,7 @@ function ModificarMateria(){
                 let array = peticionHttp.responseText; 
                 console.log(array);   
                 $("preview-area").hidden = true;
+                $("divModificar").hidden = true;
                 if(JSON.parse(peticionHttp.responseText).type == "ok"){
                     ModificarTabla();
                 }
@@ -184,6 +185,7 @@ function borrarMateria(e){
                 let array = peticionHttp.responseText; 
                 console.log(array);   
                 $("preview-area").hidden = true;
+                $("divModificar").hidden = true;
                 if(JSON.parse(peticionHttp.responseText).type == "ok"){
                     BorrarElementoTabla();
                 }
