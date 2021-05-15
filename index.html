@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/spinner.css" rel="stylesheet" type="text/css">
+    <script src="js/index.js"></script>
+    <script src="js/Grilla.js"></script>   
+    <title>Rivola Josias Primer Parcial</title>
+</head>
+<body id = "body"> 
+    <div id="preview-area" hidden>
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+        </div>
+    </div>
+
+
+    <div class="relative" >
+        <div id="divModificar" class="contenedor" hidden>
+            <label for="impNombre">Nombre</label><br>        
+            <input type="text"  id="impNombre" value="">
+
+            <label for="impNombre">Cuatrimestre</label><br>   
+            <select name="Cuatri" id = "selCuatri">
+                <option value="1">Primero</option>
+                <option value="2">Segundo</option>
+                <option value="3">Tercero</option>
+            </select><br>
+
+            <input type="radio" id="radMan" name="turno" value="maniana">
+            <label for="maniana">Mañana</label><br>
+            <input type="radio" id="radNoc" name="turno" value="noche">
+            <label for="noche">Noche</label><br>
+
+            <label for="impFecha">Fecha</label><br>        
+            <input type="date" id="impFecha"><br>
+              
+            <input type="button" id="btnModif" class="boton" value="Modificar">  
+            <input type="button" id="btnBorrar" class="boton rojo" value="Borrar">                              
+        </div>
+              
+    </div>      
+    <div id = "d_tbl"></div>  
+</body>
+</html>
